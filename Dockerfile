@@ -2,4 +2,4 @@
 # docker build -t otusvmap/web:dev .
 
 FROM nginx:alpine
-COPY /dist /usr/share/nginx/html
+COPY . /usr/share/nginx/html
