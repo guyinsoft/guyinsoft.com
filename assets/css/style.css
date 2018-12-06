@@ -1752,15 +1752,15 @@ img[class~="center"] {
 }
 
 .fullpage-wrap {
-  margin-left: -50px;
-  margin-right: -50px;
+  margin-left: -20px;
+  margin-right: -20px;
   background-color: white;
 }
 
 @media screen and (max-width: 991px) {
   .fullpage-md-wrap {
-    margin-left: -50px !important;
-    margin-right: -50px !important;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
   }
 }
 
@@ -4458,7 +4458,7 @@ aside.left form .form-input span.form-button {
 }
 
 .content-section .bg-img.fullpage-wrap {
-  padding: 0 50px;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 767px) {
