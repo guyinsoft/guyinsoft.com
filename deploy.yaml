@@ -1,0 +1,42 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guyinsoft-web
+  labels:
+    name: guyinsoft-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: guyinsoft-web
+  template:
+    metadata:
+      labels:
+        name: guyinsoft-web
+    spec:
+      containers:
+      - env:
+        - name: NODE_ENV
+          value: production
+        name: guyinsoft-web
+        image: guyin-docker.pkg.coding.net/yzis/guyinsoft/guyinsoft-web:latest
+        ports:
+          - containerPort: 80
+        imagePullPolicy: Always
+      imagePullSecrets:
+        - name: coding-devops
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: guyinsoft-web
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    name: guyinsoft-web

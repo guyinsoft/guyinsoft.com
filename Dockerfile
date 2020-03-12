@@ -1,5 +1,7 @@
 # docker 打包命令如下
-# docker build -t otusvmap/web:dev .
+# docker build -t guyinsoft-web:latest .
 
-FROM nginx:alpine
+FROM dockerhub.azk8s.cn/library/nginx:1.15.0-alpine
 COPY . /usr/share/nginx/html
+
+EXPOSE 80
