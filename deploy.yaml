@@ -20,7 +20,7 @@ spec:
         - name: NODE_ENV
           value: production
         name: guyinsoft-web
-        image: guyin-docker.pkg.coding.net/yzis/guyinsoft/guyinsoft-web:latest
+        image: guyin-docker.pkg.coding.net/guyinsoft/guyinsoft/guyinsoft-web:latest
         ports:
           - containerPort: 80
         imagePullPolicy: Always
